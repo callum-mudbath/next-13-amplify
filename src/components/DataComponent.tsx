@@ -1,4 +1,3 @@
-"use client";
 import { Box, CircularProgress, Divider, Typography } from "@mui/material";
 import { useQuery } from "@tanstack/react-query";
 
@@ -11,14 +10,14 @@ export function DataComponent() {
       ).json(),
   });
   if (query.isLoading) {
-    return <CircularProgress size="md" />;
+    return (
+      <Box display={"flex"} justifyContent={"center"}>
+        <CircularProgress />
+      </Box>
+    );
   }
   return (
-    <Box paddingTop={6} textAlign={"center"}>
-      <Typography textAlign={"center"} typography={"h4"}>
-        This data is fetched via react-query
-      </Typography>
-      <Divider sx={{ maxWidth: "300px", margin: "1rem auto" }} />
+    <Box textAlign={"center"}>
       <Typography>{query.data.title}</Typography>
       <Typography>{query.data.id}</Typography>
     </Box>
