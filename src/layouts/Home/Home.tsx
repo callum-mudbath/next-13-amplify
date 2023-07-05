@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { DataComponent } from "@/components/DataComponent";
 import { Divider } from "@mui/material";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -15,8 +16,11 @@ export default function Home() {
           textAlign={"center"}
           gutterBottom
         >
-          Material UI - Next.js example using App Router in TypeScript
+          Next.js example using App Router{" "}
         </Typography>
+        <Box textAlign={"center"}>
+          <Link href={"/about"}>About Page</Link>
+        </Box>
         <Typography marginTop={18} textAlign={"center"} typography={"h4"}>
           This data is fetched via react-query
         </Typography>
