@@ -1,5 +1,5 @@
-import { ReactQueryClient } from "@/components/ReactQueryClient";
-import ThemeRegistry from "@/components/Theme/ThemeRegistry/ThemeRegistry";
+import { ReactQueryClient } from "components/ReactQueryClient";
+import ThemeRegistry from "components/Theme/ThemeRegistry/ThemeRegistry";
 
 export const metadata = {
   title: "Next App with MUI5",

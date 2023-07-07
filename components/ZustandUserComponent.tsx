@@ -1,5 +1,5 @@
-import { useUserStore } from "@/hooks/testUserHook";
 import { Box, Button } from "@mui/material";
+import { useUserStore } from "hooks/testUserHook";
 
 export function ZustandUserComponent() {
   const addUser = useUserStore((state) => state.setUser);

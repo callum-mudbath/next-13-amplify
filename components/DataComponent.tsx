@@ -1,5 +1,5 @@
-import { useTestReactQueryQuery } from "@/hooks/testReactQueryQuery";
 import { Box, CircularProgress, Typography } from "@mui/material";
+import { useTestReactQueryQuery } from "hooks/testReactQueryQuery";
 
 export function DataComponent() {
   const query = useTestReactQueryQuery();

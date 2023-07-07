@@ -2,12 +2,12 @@
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { DataComponent } from "@/components/DataComponent";
 import { Divider } from "@mui/material";
 import Link from "next/link";
-import { ZustandUserComponent } from "@/components/ZustandUserComponent";
+import { DataComponent } from "components/DataComponent";
+import { ZustandUserComponent } from "components/ZustandUserComponent";
 
-export default function Home() {
+export default function RootPage() {
   return (
     <Container maxWidth="lg">
       <Box paddingTop={4}>
