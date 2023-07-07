@@ -1,14 +1,8 @@
-import { Box, CircularProgress, Divider, Typography } from "@mui/material";
-import { useQuery } from "@tanstack/react-query";
+import { useTestReactQueryQuery } from "@/hooks/testReactQueryQuery";
+import { Box, CircularProgress, Typography } from "@mui/material";
 
 export function DataComponent() {
-  const query = useQuery({
-    queryKey: ["todos"],
-    queryFn: async () =>
-      await (
-        await fetch("https://jsonplaceholder.typicode.com/todos/1")
-      ).json(),
-  });
+  const query = useTestReactQueryQuery();
   if (query.isLoading) {
     return (
       <Box display={"flex"} justifyContent={"center"}>
@@ -17,7 +11,7 @@ export function DataComponent() {
     );
   }
   return (
-    <Box textAlign={"center"}>
+    <Box data-testid="dataLoaded" textAlign={"center"}>
       <Typography>{query.data.title}</Typography>
       <Typography>{query.data.id}</Typography>
     </Box>

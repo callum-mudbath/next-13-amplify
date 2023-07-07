@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import { DataComponent } from "@/components/DataComponent";
 import { Divider } from "@mui/material";
 import Link from "next/link";
+import { ZustandUserComponent } from "@/components/ZustandUserComponent";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           component="h1"
           textAlign={"center"}
           gutterBottom
+          data-testid="home"
         >
           Next.js example using App Router{" "}
         </Typography>
@@ -26,6 +28,12 @@ export default function Home() {
         </Typography>
         <Divider sx={{ maxWidth: "300px", margin: "1rem auto" }} />
         <DataComponent />
+
+        <Typography marginTop={18} textAlign={"center"} typography={"h4"}>
+          Adding a user to zustand
+        </Typography>
+
+        <ZustandUserComponent />
       </Box>
     </Container>
   );
